@@ -82,7 +82,10 @@ def get_data():
     skills = [languages_text, framework_text, tools_text]
 
     get_latex_text(heading, skills, EDUCATIONS, EXPERIENCES, PROJECTS)
-    os.system("cd result && pdflatex -interaction=nonstopmode Resume.tex")
+    os.system("cd result")
+    pathpdflatex = "C:\\texlive\\2022\\bin\\win32\\"
+    pathresumetex = "C:\\Users\\JordanGONZALEZ\\Documents\\ProjetsRecherche\\ThisCVDoesNotExist\\Code\\Resume-Automation-using-ChatGPT\\result\\"
+    os.system(f"{pathpdflatex}pdflatex -interaction=nonstopmode {pathresumetex}Resume.tex")
 
 # Pack Everything
 Label(root, text="Personal Information", font=(
